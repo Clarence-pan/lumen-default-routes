@@ -1,9 +1,9 @@
 <?php
 
-
-namespace App\Http\Controllers;
+namespace App\http\Controllers;
 
 use Laravel\Lumen\Routing\Controller;
+
 class FooController extends Controller
 {
     public function doGetIndex()
@@ -25,7 +25,6 @@ class FooController extends Controller
     {
         return __METHOD__;
     }
-
 
     public function doGetBar()
     {

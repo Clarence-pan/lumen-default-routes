@@ -1,10 +1,7 @@
 <?php
 
-
 namespace Clarence\LumenDefaultRoutes;
 
-
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class DefaultRouteProvider extends ServiceProvider
@@ -13,11 +10,11 @@ class DefaultRouteProvider extends ServiceProvider
     {
         $router = app();
 
-        $router->group([], function($router){
+        $router->group([], function ($router) {
             $routes = [
-                ['/{controller}',                   DefaultRouteController::class . '@runControllerAction'],
-                ['/{controller}/{action}',          DefaultRouteController::class . '@runControllerAction'],
-                ['/{module}/{controller}/{action}', DefaultRouteController::class . '@runModuleControllerAction'],
+                ['/{controller}',                   DefaultRouteController::class.'@runControllerAction'],
+                ['/{controller}/{action}',          DefaultRouteController::class.'@runControllerAction'],
+                ['/{module}/{controller}/{action}', DefaultRouteController::class.'@runModuleControllerAction'],
             ];
 
             foreach ($routes as $route) {
@@ -30,7 +27,5 @@ class DefaultRouteProvider extends ServiceProvider
 
     public function register()
     {
-
     }
-
 }

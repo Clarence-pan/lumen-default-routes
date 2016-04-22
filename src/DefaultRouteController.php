@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Clarence\LumenDefaultRoutes;
-
 
 use Laravel\Lumen\Routing\Controller;
 

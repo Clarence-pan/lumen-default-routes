@@ -21,9 +21,9 @@ $app->singleton(
 );
 
 // register custom routes
-$app->group([], function($app){
+$app->group([], function ($app) {
     foreach (['get', 'post', 'delete', 'put', 'patch'] as $method) {
-        $app->{$method}('/fb/{action}', App\Http\Controllers\FooBarController::class . '@runAction');
+        $app->{$method}('/fb/{action}', App\Http\Controllers\FooBarController::class.'@runAction');
     }
 });
 

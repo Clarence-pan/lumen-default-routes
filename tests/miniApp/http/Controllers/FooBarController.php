@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Http\Controllers;
-
+namespace App\http\Controllers;
 
 use Clarence\LumenDefaultRoutes\DefaultRoute;
 use Laravel\Lumen\Routing\Controller;
@@ -30,7 +28,6 @@ class FooBarController extends Controller
     {
         return __METHOD__;
     }
-
 
     public function doGetJoy()
     {

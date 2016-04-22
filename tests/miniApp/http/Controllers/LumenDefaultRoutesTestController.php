@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Http\Controllers;
-
+namespace App\http\Controllers;
 
 use Laravel\Lumen\Routing\Controller;
 
@@ -28,7 +26,6 @@ class LumenDefaultRoutesTestController extends Controller
         return __METHOD__;
     }
 
-
     public function doGetFoo()
     {
         return __METHOD__;
@@ -48,5 +45,4 @@ class LumenDefaultRoutesTestController extends Controller
     {
         return __METHOD__;
     }
-
 }

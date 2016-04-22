@@ -1,10 +1,7 @@
 <?php
 
+namespace App\http\Controllers\Foo;
 
-namespace App\Http\Controllers\Foo;
-
-
-use Clarence\LumenDefaultRoutes\DefaultRoute;
 use Laravel\Lumen\Routing\Controller;
 
 class BarController extends Controller
