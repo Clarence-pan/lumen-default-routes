@@ -116,6 +116,15 @@ class DefaultRouteTest extends TestCase
         return $app;
     }
 
+    /**
+     * @runInSeparateProcess
+     */
+    public function test_case_sensitive_autoloader()
+    {
+        $this->assertFalse(class_exists('App\Http\Controllers\FoobarController'));
+        $this->assertTrue(class_exists('App\Http\Controllers\FooBarController'));
+    }
+
     protected static function registerPsr4AutoLoader($namespaces, $caseSensitive = true)
     {
         spl_autoload_register(function ($class) use ($namespaces, $caseSensitive) {
@@ -127,8 +136,18 @@ class DefaultRouteTest extends TestCase
                             $dir.DIRECTORY_SEPARATOR.substr($class, strlen($ns))).'.php';
 
                     if (is_file($file)) {
-                        if ($caseSensitive && realpath($file) != $file) {
-                            continue;
+                        if ($caseSensitive) {
+                            $fileBaseName = basename($file);
+                            if (basename(realpath($file)) != $fileBaseName){
+                                continue;
+                            } else {
+                                $globFiles = glob($file.'*'); // in mac or cifs, realpath is not enough!
+                                if (empty($globFiles)){
+                                    continue;
+                                } else if (basename($globFiles[0]) != $fileBaseName){
+                                    continue;
+                                }
+                            }
                         }
 
                         include_once $file;
