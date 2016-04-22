@@ -7,11 +7,8 @@ php:
   - hhvm
 
 before_script:
-  - pip install --user codecov
   - composer self-update && composer install --dev
 
 script:
   - ./vendor/bin/phpunit
 
-after_success:
-  - codecov
