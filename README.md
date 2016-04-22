@@ -2,7 +2,7 @@
 
 ![build status](https://travis-ci.org/Clarence-pan/lumen-default-routes.svg)
 
-With this library, you can easily add "module/controller/action" style routes for Laravel/Lumen.
+With this library, you can easily add "module/controller/action" style routes for Lumen.
 
 # Install
 
