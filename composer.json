@@ -1,5 +1,5 @@
 {
-    "name": "clarence/laravel-default-routes",
+    "name": "clarence/lumen-default-routes",
     "description": "Default routes for laravel",
     "type": "library",
     "require": {
