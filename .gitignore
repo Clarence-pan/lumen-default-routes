@@ -1,3 +1,4 @@
 /vendor/
 /tests/miniApp/storage/
+/tests/miniApp/storage/logs
 /composer.lock

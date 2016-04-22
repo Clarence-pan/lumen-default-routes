@@ -1,4 +1,4 @@
-# Default Routes For Laravel/Lumen
+# Default Routes For Lumen
 
 ![build status](https://travis-ci.org/Clarence-pan/lumen-default-routes.svg)
 
@@ -9,10 +9,10 @@ With this library, you can easily add "module/controller/action" style routes fo
 Suggest install it via composer:
 
 ```sh
-composer require clarence/laravel-default-routes
+composer require clarence/lumen-default-routes
 ```
 
-Then, register the `DefaultRouteProvider`. For lumen, please register `\Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class` in `bootstrap/app.php`.
+Then, register the `DefaultRouteProvider`. For lumen, please register `\Clarence\LumenDefaultRoutes\DefaultRouteProvider::class` in `bootstrap/app.php`.
 
 ```php
 // bootstrap/app.php
@@ -27,7 +27,7 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes/main_routes.php';
 });
 
-$app->register(Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class); // add: register default routes below registered all your own routes
+$app->register(Clarence\LumenDefaultRoutes\DefaultRouteProvider::class); // add: register default routes below registered all your own routes
 
 ```
  
@@ -38,8 +38,8 @@ $app->register(Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class); // ad
 
 Note:
 
-1. `\App\Http\Controllers\` is the namespace prefix of the controller. It can be configurated as `laravel-default-routes.controller-prefix`.
-2. In `FooController`, `Controller` is the class name suffix. It can be configurated as `laravel-default-routes.controller-suffix`.
+1. `\App\Http\Controllers\` is the namespace prefix of the controller. It can be configurated as `default-routes.controller-prefix`.
+2. In `FooController`, `Controller` is the class name suffix. It can be configurated as `default-routes.controller-suffix`.
 3. `doGetBar` is the actual method to be executed. It is `do` + `<HTTP_METHOD>` + `<action>`. And it should be a `public` method. Otherwise a `404` or `405` HTTP error will be thrown. 
 4. If `\App\Http\Controllers\FooController@doGetBar` cannot be found, `\App\Http\Controllers\Foo\BarController@doGetIndex` will be tried.
 

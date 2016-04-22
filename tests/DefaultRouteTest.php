@@ -8,8 +8,7 @@ use App\Http\Controllers\Foo\BarController;
 use App\Http\Controllers\Foo\BarzController;
 use App\Http\Controllers\FooBarController;
 use App\Http\Controllers\FooController;
-use App\Http\Controllers\LaravelDefaultRoutesTestController;
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\LumenDefaultRoutesTestController;
 use Laravel\Lumen\Testing\TestCase;
 
 class DefaultRouteTest extends TestCase
@@ -52,20 +51,20 @@ class DefaultRouteTest extends TestCase
             ['put',    'fb/joy', FooBarController::class . '::doPutJoy',],
             ['delete', 'fb/joy', FooBarController::class . '::doDeleteJoy',],
 
-            ['get',    'laravel-default-routes-test/foo', LaravelDefaultRoutesTestController::class . '::doGetFoo',],
-            ['post',   'laravel-default-routes-test/foo', LaravelDefaultRoutesTestController::class . '::doPostFoo',],
-            ['put',    'laravel-default-routes-test/foo', LaravelDefaultRoutesTestController::class . '::doPutFoo',],
-            ['delete', 'laravel-default-routes-test/foo', LaravelDefaultRoutesTestController::class . '::doDeleteFoo',],
+            ['get',    'lumen-default-routes-test/foo', LumenDefaultRoutesTestController::class . '::doGetFoo',],
+            ['post',   'lumen-default-routes-test/foo', LumenDefaultRoutesTestController::class . '::doPostFoo',],
+            ['put',    'lumen-default-routes-test/foo', LumenDefaultRoutesTestController::class . '::doPutFoo',],
+            ['delete', 'lumen-default-routes-test/foo', LumenDefaultRoutesTestController::class . '::doDeleteFoo',],
 
-            ['get',    'laravel_default_routes_test/foo', LaravelDefaultRoutesTestController::class . '::doGetFoo',],
-            ['post',   'laravel_default_routes_test/foo', LaravelDefaultRoutesTestController::class . '::doPostFoo',],
-            ['put',    'laravel_default_routes_test/foo', LaravelDefaultRoutesTestController::class . '::doPutFoo',],
-            ['delete', 'laravel_default_routes_test/foo', LaravelDefaultRoutesTestController::class . '::doDeleteFoo',],
+            ['get',    'lumen_default_routes_test/foo', LumenDefaultRoutesTestController::class . '::doGetFoo',],
+            ['post',   'lumen_default_routes_test/foo', LumenDefaultRoutesTestController::class . '::doPostFoo',],
+            ['put',    'lumen_default_routes_test/foo', LumenDefaultRoutesTestController::class . '::doPutFoo',],
+            ['delete', 'lumen_default_routes_test/foo', LumenDefaultRoutesTestController::class . '::doDeleteFoo',],
 
-            ['get',    'laravelDefaultRoutesTest/foo', LaravelDefaultRoutesTestController::class . '::doGetFoo',],
-            ['post',   'laravelDefaultRoutesTest/foo', LaravelDefaultRoutesTestController::class . '::doPostFoo',],
-            ['put',    'laravelDefaultRoutesTest/foo', LaravelDefaultRoutesTestController::class . '::doPutFoo',],
-            ['delete', 'laravelDefaultRoutesTest/foo', LaravelDefaultRoutesTestController::class . '::doDeleteFoo',],
+            ['get',    'lumenDefaultRoutesTest/foo', LumenDefaultRoutesTestController::class . '::doGetFoo',],
+            ['post',   'lumenDefaultRoutesTest/foo', LumenDefaultRoutesTestController::class . '::doPostFoo',],
+            ['put',    'lumenDefaultRoutesTest/foo', LumenDefaultRoutesTestController::class . '::doPutFoo',],
+            ['delete', 'lumenDefaultRoutesTest/foo', LumenDefaultRoutesTestController::class . '::doDeleteFoo',],
 
             ['get',    'foo/bar/fun', BarController::class . '::doGetFun',],
             ['post',   'foo/bar/fun', BarController::class . '::doPostFun',],

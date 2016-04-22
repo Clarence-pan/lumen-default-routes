@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Clarence\LaravelDefaultRoutes;
+namespace Clarence\LumenDefaultRoutes;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -64,12 +64,12 @@ trait DefaultRoute
 
     protected function getControllerPrefix()
     {
-        return config('laravel-default-routes.controller-prefix', '\\App\\Http\\Controllers\\');
+        return config('default-routes.controller-prefix', '\\App\\Http\\Controllers\\');
     }
 
     protected function getControllerSuffix()
     {
-        return config('laravel-default-routes.controller-suffix', 'Controller');
+        return config('default-routes.controller-suffix', 'Controller');
     }
 
     /**

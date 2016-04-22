@@ -7,7 +7,7 @@ $app = new Laravel\Lumen\Application(
 
 //$app->singleton(
 //    Illuminate\Contracts\Http\Kernel::class,
-//    Laravel\Lumen\Http\Kernel::class
+//    Lumen\Lumen\Http\Kernel::class
 //);
 
 $app->singleton(
@@ -28,6 +28,6 @@ $app->group([], function($app){
 });
 
 // register default routes
-$app->register(\Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class);
+$app->register(\Clarence\LumenDefaultRoutes\DefaultRouteProvider::class);
 
 return $app;

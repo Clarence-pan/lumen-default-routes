@@ -19,12 +19,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Clarence\\LaravelDefaultRoutes\\": "src"
+            "Clarence\\LumenDefaultRoutes\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Clarence\\LaravelDefaultRoutes\\": "tests"
+            "Clarence\\LumenDefaultRoutes\\": "tests"
         }
     }
 }

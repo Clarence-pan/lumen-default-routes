@@ -4,11 +4,9 @@
 namespace App\Http\Controllers;
 
 
-use Clarence\LaravelDefaultRoutes\DefaultRoute;
-
 use Laravel\Lumen\Routing\Controller;
 
-class LaravelDefaultRoutesTestController extends Controller
+class LumenDefaultRoutesTestController extends Controller
 {
     public function doGetIndex()
     {

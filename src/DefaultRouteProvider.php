@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Clarence\LaravelDefaultRoutes;
+namespace Clarence\LumenDefaultRoutes;
 
 
 use Illuminate\Routing\Router;

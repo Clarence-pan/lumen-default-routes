@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Clarence\LaravelDefaultRoutes;
+namespace Clarence\LumenDefaultRoutes;
 
 
 use Laravel\Lumen\Routing\Controller;

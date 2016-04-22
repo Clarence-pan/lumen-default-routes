@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 
-use Clarence\LaravelDefaultRoutes\DefaultRoute;
+use Clarence\LumenDefaultRoutes\DefaultRoute;
 use Laravel\Lumen\Routing\Controller;
 
 class FooBarController extends Controller
