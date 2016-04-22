@@ -20,7 +20,7 @@ class DefaultRouteTest extends TestCase
         // register autoloader
         // do not use composer's autoloader to avoid affect the primary application using this library.
         self::registerPsr4AutoLoader([
-            'App\\Http\\Controllers\\' => __DIR__.'/miniApp/http/Controllers',
+            'App\\Http\\Controllers\\' => __DIR__.'/miniApp/Http/Controllers',
         ]);
     }
 
