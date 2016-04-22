@@ -138,13 +138,13 @@ class DefaultRouteTest extends TestCase
                     if (is_file($file)) {
                         if ($caseSensitive) {
                             $fileBaseName = basename($file);
-                            if (basename(realpath($file)) != $fileBaseName){
+                            if (basename(realpath($file)) != $fileBaseName) {
                                 continue;
                             } else {
                                 $globFiles = glob($file.'*'); // in mac or cifs, realpath is not enough!
-                                if (empty($globFiles)){
+                                if (empty($globFiles)) {
                                     continue;
-                                } else if (basename($globFiles[0]) != $fileBaseName){
+                                } elseif (basename($globFiles[0]) != $fileBaseName) {
                                     continue;
                                 }
                             }
