@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Foo;
 
 
 use Clarence\LaravelDefaultRoutes\DefaultRoute;
-use Illuminate\Routing\Controller;
+use Laravel\Lumen\Routing\Controller;
 
 class BarzController extends Controller
 {

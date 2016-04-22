@@ -3,9 +3,7 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Routing\Controller;
-
+use Laravel\Lumen\Routing\Controller;
 class FooController extends Controller
 {
     public function doGetIndex()

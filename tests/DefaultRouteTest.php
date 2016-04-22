@@ -10,7 +10,7 @@ use App\Http\Controllers\FooBarController;
 use App\Http\Controllers\FooController;
 use App\Http\Controllers\LaravelDefaultRoutesTestController;
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Testing\TestCase;
+use Laravel\Lumen\Testing\TestCase;
 
 class DefaultRouteTest extends TestCase
 {
@@ -25,14 +25,6 @@ class DefaultRouteTest extends TestCase
         self::registerPsr4AutoLoader([
             'App\\Http\\Controllers\\' =>  __DIR__.'/miniApp/http/Controllers',
         ]);
-    }
-
-
-    public function setUp()
-    {
-        parent::setUp();
-
-        $this->app->make('router')->any('/fb/{action}', FooBarController::class . '@runAction');
     }
 
     /**
@@ -53,6 +45,7 @@ class DefaultRouteTest extends TestCase
             ['post',   'foo_bar/joy', FooBarController::class . '::doPostJoy',],
             ['put',    'foo-Bar/joy', FooBarController::class . '::doPutJoy',],
             ['delete', 'fooBar/joy', FooBarController::class . '::doDeleteJoy',],
+            ['patch',  'fooBar/joy', FooBarController::class . '::doPatchJoy',],
 
             ['get',    'fb/joy', FooBarController::class . '::doGetJoy',],
             ['post',   'fb/joy', FooBarController::class . '::doPostJoy',],

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 
 
 use Clarence\LaravelDefaultRoutes\DefaultRoute;
-use Illuminate\Routing\Controller;
+
+use Laravel\Lumen\Routing\Controller;
 
 class LaravelDefaultRoutesTestController extends Controller
 {

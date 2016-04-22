@@ -12,7 +12,24 @@ Suggest install it via composer:
 composer require clarence/laravel-default-routes
 ```
 
-Then, register the `DefaultRouteProvider`. For example, add `\Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class` to the `providers` section in `config/app.php`.
+Then, register the `DefaultRouteProvider`. For lumen, please register `\Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class` in `bootstrap/app.php`.
+
+```php
+// bootstrap/app.php
+
+$app = new Laravel\Lumen\Application(
+    realpath(__DIR__.'/../')
+);
+
+//...
+
+$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+    require __DIR__.'/../app/Http/routes/main_routes.php';
+});
+
+$app->register(Clarence\LaravelDefaultRoutes\DefaultRouteProvider::class); // add: register default routes below registered all your own routes
+
+```
  
  
 # Routes Maps

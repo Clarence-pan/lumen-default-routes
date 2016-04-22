@@ -4,7 +4,7 @@
 namespace Clarence\LaravelDefaultRoutes;
 
 
-use Illuminate\Routing\Controller;
+use Laravel\Lumen\Routing\Controller;
 
 class DefaultRouteController extends Controller
 {

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 
 
 use Clarence\LaravelDefaultRoutes\DefaultRoute;
-use Illuminate\Routing\Controller;
+use Laravel\Lumen\Routing\Controller;
+
 class FooBarController extends Controller
 {
     use DefaultRoute;
@@ -47,6 +48,11 @@ class FooBarController extends Controller
     }
 
     public function doDeleteJoy()
+    {
+        return __METHOD__;
+    }
+
+    public function doPatchJoy()
     {
         return __METHOD__;
     }
